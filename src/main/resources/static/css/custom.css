@@ -1,0 +1,137 @@
+
+
+body {
+background-color: lightblue;
+				font-size: 62.5%;
+			}
+			label, input {
+				display: block;
+			}
+			input.text {
+				margin-bottom: 12px;
+				width: 95%;
+				padding: .4em;
+			}
+			fieldset {
+				padding: 0;
+				border: 0;
+				margin-top: 25px;
+			}
+			h1 {
+				font-size: 1.2em;
+				margin: .6em 0;
+			}
+			div#stockrecords-contain {
+				width: 350px;
+				margin: 20px 0;
+			}
+			div#stockrecords-contain table {
+				margin: 1em 0;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			div#stockrecords-contain table td, div#stockrecords-contain table th {
+				border: 1px solid #eee;
+				padding: .6em 10px;
+				text-align: left;
+			}
+			.ui-dialog .ui-state-error {
+				padding: .3em;
+			}
+			.validateTips {
+				border: 1px solid transparent;
+				padding: 0.3em;
+			}
+			.divmenu{
+			    height: 100px;
+                background-color: #911754;
+                color: #42cef4;
+                font-weight:bold;
+                text-align:center;
+                font-size: 64px;
+			}
+			table {
+                width: 40em;
+                margin: 2em auto;
+            }
+
+            thead {
+                background: #000;
+                color: #fff;
+            }
+
+            td {
+                width: 10em;
+                padding: 0.3em;
+            }
+
+            tbody {
+                background: #ccc;
+            }
+
+            div.pager {
+                text-align: center;
+                margin: 1em 0;
+            }
+
+            div.pager span {
+                display: inline-block;
+                width: 1.8em;
+                height: 1.8em;
+                line-height: 1.8;
+                text-align: center;
+                cursor: pointer;
+                background: #000;
+                color: #fff;
+                margin-right: 0.5em;
+            }
+
+            div.pager span.active {
+                background: #c00;
+            }
+			.stockForm input {
+			    width: 30%;
+                 box-sizing: border-box;
+                 border: 2px solid #ccc;
+                 border-radius: 4px;
+                 font-size: 25px;
+                 background-color: white;
+                 background-position: 10px 10px;
+                 background-repeat: no-repeat;
+                 padding: 12px 20px 12px 40px;
+                 display: block;
+                                   margin-right: auto;
+                                   margin-left: auto;
+			}
+
+			.stockForm select {
+              text-align: center;
+              text-align-last: center;
+              width: 30%;
+                               box-sizing: border-box;
+                               border: 2px solid #ccc;
+                               border-radius: 4px;
+                               font-size: 25px;
+                               background-color: white;
+                               background-position: 10px 10px;
+                               background-repeat: no-repeat;
+                               padding: 12px 20px 12px 40px;
+                               display: block;
+                                                 margin-right: auto;
+                                                 margin-left: auto;
+            }
+            .stockForm option {
+              text-align: left;
+              width: 30%;
+                               box-sizing: border-box;
+                               border: 2px solid #ccc;
+                               border-radius: 4px;
+                               font-size: 25px;
+                               background-color: white;
+                               background-position: 10px 10px;
+                               background-repeat: no-repeat;
+                               padding: 12px 20px 12px 40px;
+                               display: block;
+                                                 margin-right: auto;
+                                                 margin-left: auto;
+            }

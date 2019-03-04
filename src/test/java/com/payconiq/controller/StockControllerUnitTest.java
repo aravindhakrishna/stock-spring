@@ -19,6 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = StockController.class,secure = false)
@@ -46,7 +47,7 @@ public class StockControllerUnitTest {
 
         Mockito.when(stockStorageRepo.getStocks()).thenReturn(stocks);
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String expected= "[{id:0,name:gold,currentPrice:{\"amount\":2000.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868},{id:0,name:platinum,currentPrice:{\"amount\":2500.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868}]";
+        String expected= "[{id:0,name:GOLD,currentPrice:{\"amount\":2000.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868},{id:0,name:PLATINUM,currentPrice:{\"amount\":2500.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868}]";
         JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
     }
 
@@ -56,7 +57,7 @@ public class StockControllerUnitTest {
                 "/api/stocks/0");
         Mockito.when(stockStorageRepo.findById(Mockito.anyInt())).thenReturn(stock1);
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String expected= "{id:0,name:gold,currentPrice:{\"amount\":2000.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868}";
+        String expected= "{id:0,name:GOLD,currentPrice:{\"amount\":2000.0,\"currency\":EUR,\"unit\":1},lastUpdate:1551548467868}";
 
         JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
     }
@@ -95,10 +96,10 @@ public class StockControllerUnitTest {
                 "/api/stocks")
                 .accept(MediaType.APPLICATION_JSON).content(egStock1)
                 .contentType(MediaType.APPLICATION_JSON);
-        Mockito.when(stockStorageRepo.findStockByName(Mockito.anyString())).thenReturn(stock1);
+        Mockito.when(stockStorageRepo.findStockByName(Mockito.anyString())).thenReturn(Arrays.asList(stock1));
         stock1.setCurrentPrice(Amount.Of(2500.0D));
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String expected= "{\"result\":\"updated\",\"stock\":{id:0,name:gold,currentPrice:{\"amount\":2500.0,\"currency\":\"EUR\",\"unit\":1},lastUpdate:1551542335998}}";
+        String expected= "{\"result\":\"updated\",\"stock\":{id:0,name:GOLD,currentPrice:{\"amount\":2500.0,\"currency\":\"EUR\",\"unit\":1},lastUpdate:1551542335998}}";
         System.out.println(result.getResponse().getContentAsString());
 //        JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
     }
@@ -112,7 +113,7 @@ public class StockControllerUnitTest {
         Mockito.when(stockStorageRepo.findById(Mockito.anyInt())).thenReturn(stock1);
         stock1.setCurrentPrice(Amount.Of(2500.0D));
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-        String expected= "{\"result\":\"priceUpdated\",\"stock\":{id:0,name:gold,currentPrice:{\"amount\":2500.0,\"currency\":\"EUR\",\"unit\":1},lastUpdate:1551548467868}}";
+        String expected= "{\"result\":\"priceUpdated\",\"stock\":{id:0,name:GOLD,currentPrice:{\"amount\":2500.0,\"currency\":\"EUR\",\"unit\":1},lastUpdate:1551548467868}}";
 
         JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
     }

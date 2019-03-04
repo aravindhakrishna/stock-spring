@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
     public class StockController {
@@ -20,6 +18,22 @@ import java.util.Map;
     public List<Stock> listStocks(Model model){
         return stockStorageRepo.getStocks();
     }
+
+
+    @GetMapping("/api/stock/names")
+    public Set<String> getStockNames(Model model){
+        Set<String> res =new HashSet<String>();
+        for(Stock stk:stockStorageRepo.getStocks()){
+            res.add(stk.getName());
+        }
+        return res;
+    }
+
+    @GetMapping("/api/stock/{name}")
+    public List<Stock> getStockNames(@PathVariable("name") String name, Model model){
+        return stockStorageRepo.findStockByName(name);
+    }
+
 
     @GetMapping("/api/stocks/{id}")
     public Object stocks(@PathVariable("id") int id, Model model){

@@ -4,7 +4,9 @@ import com.payconiq.domain.Amount;
 import com.payconiq.domain.Stock;
 import org.junit.Test;
 
+import javax.validation.constraints.Null;
 import java.time.Instant;
+import java.util.Arrays;
 
 public class StorageRepoUnitTest {
 
@@ -56,7 +58,6 @@ public class StorageRepoUnitTest {
 
         assert (stockStorageRepo.findById(stockId1)!=null);
         assert (stockStorageRepo.findById(stockId2) !=null);
-        assert (stockStorageRepo.findStockByName("hhhh")==null);
         assert (stockStorageRepo.findStockByName(stock1.getName())!=null);
         assert (stockStorageRepo.findById(stockId1).getName()=="gold");
     }

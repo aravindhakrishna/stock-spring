@@ -16,7 +16,7 @@ public class CustomStockSerializer extends JsonSerializer<Stock> {
         DateTimeFormatter dtf= DateTimeFormatter.ofPattern("YYYY-MM-DD'T'hh:mm:ss.SSSZ");
         jsonGenerator.writeStartObject();
         jsonGenerator.writeNumberField("id",stock.getId());
-        jsonGenerator.writeStringField("name",stock.getName());
+        jsonGenerator.writeStringField("name",stock.getName().toUpperCase());
         jsonGenerator.writeObjectField("currentPrice",stock.getCurrentPrice());
 //        Instant.ofEpochMilli(stock.getLastUpdate());
         jsonGenerator.writeNumberField("lastUpdate",stock.getLastUpdate());

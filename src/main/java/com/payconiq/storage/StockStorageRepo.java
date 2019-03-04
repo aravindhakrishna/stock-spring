@@ -2,6 +2,8 @@ package com.payconiq.storage;
 
 import com.payconiq.domain.Stock;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -28,15 +30,16 @@ public class StockStorageRepo {
         return null;
     }
 
-    public Stock findStockByName(String name){
+    public List<Stock> findStockByName(String name){
+        java.util.List<Stock> stk=new ArrayList<Stock>();
          for(int i=0;i<stocks.size();i++){
              if(stocks.get(i).getName().equals(name)) {
                  Stock stock=stocks.get(i);
                  stock.setIndex(i);
-                 return  stock;
+                 stk.add(stock);
              }
          }
-        return null;
+        return stk;
     }
 
     public Stock findById(int id){
@@ -62,4 +65,7 @@ public class StockStorageRepo {
         stocks.set(stock.getIndex(),stock);
     }
 
+    public void clear(){
+        stocks.clear();
+    }
 }

@@ -12,7 +12,7 @@ public class CustomAmountSerializer extends JsonSerializer<Amount> {
     @Override
     public void serialize(Amount amount, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.writeStartObject();
-        jsonGenerator.writeStringField("currency",amount.getCurrency().getCurrencyCode());
+        jsonGenerator.writeStringField("currency",amount.getCurrency().getSymbol());
         jsonGenerator.writeNumberField("amount",amount.getValue());
         jsonGenerator.writeNumberField("unit",amount.getUnit());
         jsonGenerator.writeEndObject();

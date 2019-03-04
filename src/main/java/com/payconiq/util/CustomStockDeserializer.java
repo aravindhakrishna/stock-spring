@@ -30,7 +30,7 @@ public class CustomStockDeserializer extends JsonDeserializer<Stock> {
                ts=Instant.now(Clock.systemUTC());
             }
             if(node.has("name")){
-                String name=node.get("name").asText();
+                String name=node.get("name").asText().toLowerCase();
                 return  new Stock(name,covertAmount(amount,currency,unit) ,ts.toEpochMilli());
             }else{
                 return  new Stock(covertAmount(amount,currency,unit),ts.toEpochMilli());
