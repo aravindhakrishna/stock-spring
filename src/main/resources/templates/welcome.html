@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Welcome</title>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href="css/custom.css"
+          rel="stylesheet">
+
+    <link href="css/c3.css" rel="stylesheet">
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- Load d3.js and c3.js -->
+    <script src="js/d3.v5.min.js" charset="utf-8"></script>
+    <script src="js/c3.min.js"></script>
+
+</head>
+<body>
+<div class="divMenu" data-toggle="collapse" data-target=".table-responsive">STOCKS</div>
+<div class="table-responsive" >
+    <table id="stockrecords" class="display" width="100%">
+    </table>
+</div>
+<div class="divMenu"  data-toggle="collapse" data-target=".stockForm">ADD STOCK</div>
+<div class="stockForm" >
+    <input id="stockName" type="text" placeholder="Enter Stock Name" />
+    <br>
+    <input id="amount" type="text" placeholder="Amount in Euro" />
+    <br>
+    <select id="unit">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+
+    <br>
+    <input type="datetime-local" id="meeting-time" step="2"/>
+    <br>
+    <input id="addStock" type="submit" style="border-radius: 20px;"/>
+    <div id="formFeedback"></div>
+    <div id="formError" style="color:red;"></div>
+</div>
+<div class="divMenu"  data-toggle="collapse" data-target=".stockgraph">Graph</div>
+<div class="stockgraph" >
+    <select id="stocks"> </select>
+    <div id="charts"> </div>
+</div>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</body>
+</html>
