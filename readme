@@ -1,2 +1,37 @@
 #Run application using 
 mvn spring-boot:run
+
+
+#About Application Stocks Management
+#API
+#GET All Stocks
+/api/stocks
+
+#GET Specific
+/api/stocks/{id}
+
+#POST Create Stock
+/api/stocks 
+{"name":"xxx","currentPrice":{"amount":2000.0,"currency":"EUR","unit":1},"lastUpdate":<optional>}
+
+#PUT update price
+/api/stocks/{id}
+
+{"currentPrice":{"amount":2000.0,"currency":"EUR","unit":1}}
+
+
+#DELETE stock
+/api/stocks/{id}
+
+
+#GET stats of specific stock  <UI Graph>
+/api/stock/{name}
+
+#GET all the stocks name
+/api/stock/names
+
+#Test Cases Covered
+#Controller
+#Domain
+#Serializer and Deserializer
+#Storage InMemory 
