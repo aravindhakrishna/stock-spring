@@ -1,131 +1,139 @@
-
-
 body {
-background-color: lightblue;
-				font-size: 62.5%;
-			}
-			label, input {
-				display: block;
-			}
-			input.text {
-				margin-bottom: 12px;
-				width: 95%;
-				padding: .4em;
-			}
-			fieldset {
-				padding: 0;
-				border: 0;
-				margin-top: 25px;
-			}
-			h1 {
-				font-size: 1.2em;
-				margin: .6em 0;
-			}
-			div#stockrecords-contain {
-				width: 350px;
-				margin: 20px 0;
-			}
-			div#stockrecords-contain table {
-				margin: 1em 0;
-				border-collapse: collapse;
-				width: 100%;
-			}
-			div#stockrecords-contain table td, div#stockrecords-contain table th {
-				border: 1px solid #eee;
-				padding: .6em 10px;
-				text-align: left;
-			}
-			.ui-dialog .ui-state-error {
-				padding: .3em;
-			}
-			.validateTips {
-				border: 1px solid transparent;
-				padding: 0.3em;
-			}
-			.divmenu{
-			    height: 100px;
-                background-color: #911754;
-                color: #42cef4;
-                font-weight:bold;
-                text-align:center;
-                font-size: 64px;
-			}
-            .table-responsive{
-               width:100%
-               height:100%
-                              text-align:center;
-                              font-size: 15px;
-            }
+	background-color: lightblue;
+	font-size: 62.5%;
+}
 
-			.stockForm input {
-			    width: 30%;
-                 box-sizing: border-box;
-                 border: 2px solid #ccc;
-                 border-radius: 4px;
-                 font-size: 25px;
-                 background-color: white;
-                 background-position: 10px 10px;
-                 background-repeat: no-repeat;
-                 padding: 12px 20px 12px 40px;
-                 display: block;
-                                   margin-right: auto;
-                                   margin-left: auto;
-			}
+label,
+input {
+	display: block;
+}
 
-			.stockForm select {
-              text-align: center;
-              text-align-last: center;
-              width: 30%;
-                               box-sizing: border-box;
-                               border: 2px solid #ccc;
-                               border-radius: 4px;
-                               font-size: 25px;
-                               background-color: white;
-                               background-position: 10px 10px;
-                               background-repeat: no-repeat;
-                               padding: 12px 20px 12px 40px;
-                               display: block;
-                                                 margin-right: auto;
-                                                 margin-left: auto;
-            }
-            .stockForm option {
-              text-align: left;
-              width: 30%;
-                               box-sizing: border-box;
-                               border: 2px solid #ccc;
-                               border-radius: 4px;
-                               font-size: 25px;
-                               background-color: white;
-                               background-position: 10px 10px;
-                               background-repeat: no-repeat;
-                               padding: 12px 20px 12px 40px;
-                               display: block;
-                                                 margin-right: auto;
-                                                 margin-left: auto;
-            }
+input.text {
+	margin-bottom: 12px;
+	width: 95%;
+	padding: .4em;
+}
 
-             .stockGraph{
+fieldset {
+	padding: 0;
+	border: 0;
+	margin-top: 25px;
+}
 
-                          width: 100%;
-                          height:100%;
-                        }
+h1 {
+	font-size: 1.2em;
+	margin: .6em 0;
+}
 
-                         #charts {
-                         float:left;
-                                         width:50%;
-                                         height:50%
-                                         border:1px;
+div#stockrecords-contain {
+	width: 350px;
+	margin: 20px 0;
+}
 
-                                      }
-                          #stocks {
-                                float:right;
-                                width: 150px;
-                                height:40px;
-                                border: 2px solid #ccc;
-                                                               border-radius: 4px;
-                                box-sizing: border-box;
-                                font-size: 25px;
-                                background-color: white;
-                                display: block;
-                                margin-right: auto;
-                                    }
+div#stockrecords-contain table {
+	margin: 1em 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div#stockrecords-contain table td,
+div#stockrecords-contain table th {
+	border: 1px solid #eee;
+	padding: .6em 10px;
+	text-align: left;
+}
+
+.ui-dialog .ui-state-error {
+	padding: .3em;
+}
+
+.validateTips {
+	border: 1px solid transparent;
+	padding: 0.3em;
+}
+
+.divmenu {
+	height: 100px;
+	background-color: #911754;
+	color: #42cef4;
+	font-weight: bold;
+	text-align: center;
+	font-size: 64px;
+}
+
+.table-responsive {
+	width: 100% height:100% text-align:center;
+	font-size: 15px;
+}
+
+.stockForm input {
+	width: 30%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 25px;
+	background-color: white;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.stockForm select {
+	text-align: center;
+	text-align-last: center;
+	width: 30%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 25px;
+	background-color: white;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.stockForm option {
+	text-align: left;
+	width: 30%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 25px;
+	background-color: white;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.stockGraph {
+	width: 100%;
+	height: 100%;
+}
+
+#charts {
+	float: left;
+	width: 50%;
+	height: 50% border:1px;
+}
+
+#stocks {
+	float: right;
+	width: 150px;
+	height: 40px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 25px;
+	background-color: white;
+	display: block;
+	margin-right: auto;
+}

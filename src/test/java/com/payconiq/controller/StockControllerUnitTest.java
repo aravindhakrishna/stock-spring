@@ -100,8 +100,7 @@ public class StockControllerUnitTest {
         stock1.setCurrentPrice(Amount.Of(2500.0D));
         MvcResult result = mockMvc.perform(requestBuilder).andReturn();
         String expected= "{\"result\":\"updated\",\"stock\":{id:0,name:GOLD,currentPrice:{\"amount\":2500.0,\"currency\":\"EUR\",\"unit\":1},lastUpdate:1551542335998}}";
-        System.out.println(result.getResponse().getContentAsString());
-//        JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
+        JSONAssert.assertEquals(expected,result.getResponse().getContentAsString(),false);
     }
     @Test
     public void  updateStockPrice() throws  Exception{
