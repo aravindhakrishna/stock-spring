@@ -30,8 +30,12 @@ public class CustomStockDeserializer extends JsonDeserializer<Stock> {
                ts=Instant.now(Clock.systemUTC());
             }
             if(node.has("name")){
-                String name=node.get("name").asText().toLowerCase();
-                return  new Stock(name,covertAmount(amount,currency,unit) ,ts.toEpochMilli());
+                if(node.get("name").asText().matches("^[a-zA-Z]*$")){
+                    String name=node.get("name").asText().toLowerCase();
+                    return  new Stock(name,covertAmount(amount,currency,unit) ,ts.toEpochMilli());
+                }else{
+                    throw new IllegalArgumentException("Not an valid name");
+                }
             }else{
                 return  new Stock(covertAmount(amount,currency,unit),ts.toEpochMilli());
             }
@@ -41,6 +45,8 @@ public class CustomStockDeserializer extends JsonDeserializer<Stock> {
         }catch (DateTimeParseException exe){
             throw exe;
         }catch (NullPointerException ne){
+            throw ne;
+        } catch (IllegalArgumentException ne){
             throw ne;
         }
     }
