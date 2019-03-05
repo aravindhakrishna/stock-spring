@@ -2,6 +2,9 @@
 mvn spring-boot:run
 
 
+#Can be access via http://localhost:8080/
+
+
 #About Application Stocks Management
 #API
 #GET All Stocks
